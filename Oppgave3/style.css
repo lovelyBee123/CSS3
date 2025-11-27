@@ -1,0 +1,20 @@
+/* Flexbox */
+.sec1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    
+    background-color: orange;
+    height: 100vh;
+}
+
+/* Flex-item */
+#tittle1 {
+    color: white;
+    font-size: 3.25rem;
+}
+
+#undertext1 {
+    color: white;
+}
