@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Oppgave</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header – toppseksjonen på siden -->
+    <header class="header">Header</header>
+   
+    <!-- Navigasjonsmeny – bruker flex for å plassere lenkene ryddig -->
+    <nav class="nav"> 
+        <a href="#">Hjem</a>
+        <a href="#">Biografi</a>
+        <a href="#">Fakta</a>
+        <a href="#">Galleri</a>
+    </nav>
+
+    <!-- Hovedinnhold – flex-container som holder main + sidebar -->
+    <main class="content">
+
+        <!-- Venstre hovedinnhold -->
+        <section class="main-content">
+            <h2>Napoleon Bonaparte</h2>
+
+            <!-- Bilde med maks bredde satt i CSS -->
+            <img src="napoleon.jpg" alt="Portrett av Napoleon" class="article-image">
+
+            <p>
+                Napoleon Bonaparte (1769-1821) var en fransk 
+                militær leder og keiser som spilte en sentral rolle 
+                i europeisk politikk på begynnelsen av 1800-tallet. 
+                Han er kjent for sine militære reformer, 
+                juridiske reformer gjennom Napoleonskoden,
+                og sine store territorielle ambisjoner.
+            </p>
+
+            <p>
+                Til tross for sine seire endte hans regime med nederlaget i 
+                Waterloo i 1815, 
+                og han ble senere sendt i eksil til St. Helena, der han døde.
+                Napoleons innflytelse på europeisk historie er betydelig og 
+                debatteres fremdeles i dag.
+            </p>
+        </section>
+    
+        <!-- Sidebar – ekstra informasjon på høyre side -->
+        <aside class="sidebar">
+            <h3>Fakta</h3>
+            <ul>
+                <li>Født: 15. august 1769</li>
+                <li>Sted: Korsika</li>
+                <li>Keiser av Frankrike: 1804–1814</li>
+                <li>Nederlag: Waterloo, 1815</li>
+                <li>Død: 5. mai 1821</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- Footer – nederste del av siden -->
+    <footer class="footer">Footer</footer>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Fjerner standard margin/padding og sørger for at bredder regnes riktig */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;            /* Gjør hele siden til en flex-container */
+    flex-direction: column;   /* Legger alt i en vertikal kolonne */
+    min-height: 100vh;        /* Sørger for at footeren holder seg nederst */
+}
+
+/* --- BILDE I ARTIKKEL --- */
+.article-image {
+    width: 100%;              /* Bilde skalerer ned ved behov */
+    max-width: 400px;         /* Hindrer at bildet blir for stort */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;       /* Avrundede hjørner */
+    display: block;
+}
+
+/* --- HEADER --- */
+.header {
+    background-color: #4CAF50;
+    padding: 20px;
+    color: white;
+    text-align: center;       /* Sentrerer teksten */
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* --- NAVIGASJON --- */
+.nav {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;            /* Plasserer menylenkene på rekke */
+    justify-content: center;  /* Sentrerer dem horisontalt */
+    gap: 20px;                /* Mellomrom mellom lenkene */
+    font-size: 1rem;
+}
+
+.nav a {
+    color: white;             /* Gjør lenkene hvite */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline; /* Enkelt hover-effekt */
+}
+
+/* --- HOVEDINNHOLD (MAIN + SIDEBAR) --- */
+.content {
+    display: flex;             /* Legger main og sidebar ved siden av hverandre */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;                 /* Mellomrom mellom main og sidebar */
+    flex: 1;                   /* Fyller plassen mellom nav og footer */
+}
+
+/* Venstre hoveddel av siden */
+.main-content {
+    background-color: #ddd;
+    padding: 20px;
+    flex: 7;                   /* Tar mer plass enn sidebar */
+}
+
+.main-content h2 {
+    margin-bottom: 15px;
+}
+
+/* Høyre sideinnhold */
+.sidebar {
+    background-color: #ddd;
+    padding: 20px;
+    flex: 1;                   /* Smalere enn main-content */
+}
+
+.sidebar h3 {
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;          /* Fjerner standard punktliste */
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
