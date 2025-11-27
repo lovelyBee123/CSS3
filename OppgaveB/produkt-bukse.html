@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="no">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Bukse</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header">
+  <img src="images/logo.png" class="logo">
+  <nav class="main-nav"><a href="index.html">Hjem</a><a href="produkter.html">Produkter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+  <a class="cart-link" href="handlekurv.html"><img src="images/handlevogn.png" class="cart-icon"><span class="cart-count">0</span></a>
+</header>
+
+<main class="product-page container">
+  <img src="images/bukse1.jpg" class="product-large" alt="Bukse">
+  <section class="product-details">
+    <h1>Bukse</h1>
+    <p class="price">399 kr</p>
+    <p>Komfortabel bukse med god passform.</p>
+    <button class="btn" onclick="leggTilIKurv({name:'Bukse', price:399})">Legg i handlekurv</button>
+  </section>
+</main>
+
+<div id="simpleModal" class="modal"><div class="modal-box"><p id="modalText">Produktet er lagt i handlekurven.</p><button onclick="lukkModal()" class="btn-outline">Lukk</button><a href="handlekurv.html" class="btn">Gå til handlekurv</a></div></div>
+
+<footer class="site-footer"><div class="container">© 2025 KlærNett</div></footer>
+
+<script src="cart.js"></script><script src="script.js"></script>
+
+<button onclick="addToCart('Bukse', 399, 'images/bukse1.jpg')">Legg i handlekurv</button>
+
+</body>
+</html>

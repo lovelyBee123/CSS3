@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hjem – KlærNett</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: logo til venstre, nav i midten, cart til høyre -->
+  <!-- Jeg bruker enkel flex for at alt skal ligge pent i en rad -->
+  <header class="site-header">
+    <img src="images/logo.png" alt="Logo" class="logo">
+
+    <nav class="main-nav">
+      <a href="index.html">Hjem</a>
+      <a href="produkter.html">Produkter</a>
+      <a href="om-oss.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <!-- Cart-link; .cart-count oppdateres av cart.js -->
+    <a class="cart-link" href="handlekurv.html" aria-label="Handlekurv">
+      <img src="images/handlevogn.png" alt="Handlekurv" class="cart-icon">
+      <span class="cart-count" aria-hidden="true">0</span>
+    </a>
+  </header>
+
+  <!-- HERO / velkomst -->
+  <section class="hero">
+    <div class="container">
+      <h1>Velkommen til KlærNett</h1>
+      <p>Rimelige kvalitetsklær — se våre produkter nedenfor.</p>
+      <a class="btn-large" href="produkter.html">Se produkter</a>
+    </div>
+  </section>
+
+  <!-- En kort featured seksjon -->
+  <section class="featured container">
+    <h2>Utvalgte produkter</h2>
+    <div class="featured-grid">
+      <!-- Vi linker til de spesifikke produktsidene -->
+      <a class="feature" href="produkt-jakke.html">
+        <img src="images/jakke1.png" alt="Jakke">
+        <p>Jakke — 599 kr</p>
+      </a>
+      <a class="feature" href="produkt-kjole.html">
+        <img src="images/kjole1.jpeg" alt="Kjole">
+        <p>Kjole — 499 kr</p>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 KlærNett — kontakt@klaernett.no</p>
+    </div>
+  </footer>
+
+  <!-- Felles JS: cart.js holder handlekurven i localStorage, script.js holder side-logikk -->
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

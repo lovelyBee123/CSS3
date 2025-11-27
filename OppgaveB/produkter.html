@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Produkter – KlærNett</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header (samme struktur overalt) -->
+  <header class="site-header">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <nav class="main-nav">
+      <a href="index.html">Hjem</a>
+      <a class="active" href="produkter.html">Produkter</a>
+      <a href="om-oss.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <a class="cart-link" href="handlekurv.html"><img src="images/handlevogn.png" class="cart-icon"><span class="cart-count">0</span></a>
+  </header>
+
+  <main class="container">
+    <h1>Produkter</h1>
+
+    <!-- Filtrering: enkelt panel over grid -->
+    <!-- Filter-knapper håndteres i script.js (velg kategori) -->
+    <div class="filter-row">
+      <button data-cat="all" class="filter-btn">Alle</button>
+      <button data-cat="overdel" class="filter-btn">Overdeler</button>
+      <button data-cat="underdel" class="filter-btn">Underdeler</button>
+      <button data-cat="accessory" class="filter-btn">Tilbehør</button>
+    </div>
+
+    <!-- PRODUKTGRID: bruker CSS Grid: auto-fill for responsiv layout -->
+    <section id="productGrid" class="product-grid">
+      <!-- Hvert kort har data-attribute for kategori + data-price (script.js bruker dette) -->
+      <article class="product-card" data-cat="underdel" data-price="399">
+        <img src="images/bukse1.jpg" alt="Bukse">
+        <h3>Bukse</h3>
+        <p class="price">399 kr</p>
+        <div class="card-actions">
+          <a href="produkt-bukse.html" class="btn">Se mer</a>
+          <button class="btn-outline add-to-cart" data-name="Bukse" data-price="399">Legg i handlekurv</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-cat="overdel" data-price="599">
+        <img src="images/jakke1.png" alt="Jakke">
+        <h3>Jakke</h3>
+        <p class="price">599 kr</p>
+        <div class="card-actions">
+          <a href="produkt-jakke.html" class="btn">Se mer</a>
+          <button class="btn-outline add-to-cart" data-name="Jakke" data-price="599">Legg i handlekurv</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-cat="overdel" data-price="499">
+        <img src="images/kjole1.jpeg" alt="Kjole">
+        <h3>Kjole</h3>
+        <p class="price">499 kr</p>
+        <div class="card-actions">
+          <a href="produkt-kjole.html" class="btn">Se mer</a>
+          <button class="btn-outline add-to-cart" data-name="Kjole" data-price="499">Legg i handlekurv</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-cat="accessory" data-price="149">
+        <img src="images/lue.jpg" alt="Lue">
+        <h3>Lue</h3>
+        <p class="price">149 kr</p>
+        <div class="card-actions">
+          <a href="produkt-lue.html" class="btn">Se mer</a>
+          <button class="btn-outline add-to-cart" data-name="Lue" data-price="149">Legg i handlekurv</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-cat="accessory" data-price="79">
+        <img src="images/sokker1.jpg" alt="Sokker">
+        <h3>Sokker</h3>
+        <p class="price">79 kr</p>
+        <div class="card-actions">
+          <a href="produkt-sokker.html" class="btn">Se mer</a>
+          <button class="btn-outline add-to-cart" data-name="Sokker" data-price="79">Legg i handlekurv</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-cat="overdel" data-price="199">
+        <img src="images/tskjorte1.jpg" alt="T-skjorte">
+        <h3>T-skjorte</h3>
+        <p class="price">199 kr</p>
+        <div class="card-actions">
+          <a href="produkt-tskjorte.html" class="btn">Se mer</a>
+          <button class="btn-outline add-to-cart" data-name="T-skjorte" data-price="199">Legg i handlekurv</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 KlærNett</div>
+  </footer>
+
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

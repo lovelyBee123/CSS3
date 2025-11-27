@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jakke – KlærNett</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Samme header -->
+  <header class="site-header">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <nav class="main-nav">
+      <a href="index.html">Hjem</a>
+      <a href="produkter.html">Produkter</a>
+      <a href="om-oss.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <a class="cart-link" href="handlekurv.html"><img src="images/handlevogn.png" class="cart-icon"><span class="cart-count">0</span></a>
+  </header>
+
+  <!-- Produktside: FLEXBOX som plasserer bilde + info ved siden av hverandre -->
+  <main class="product-page container">
+    <img src="images/jakke1.png" alt="Jakke" class="product-large">
+    <section class="product-details">
+      <h1>Jakke</h1>
+      <p class="price">599 kr</p>
+      <p>Varm jakke i god kvalitet — passer perfekt til høst/vinter.</p>
+
+      <!-- Add-to-cart bruker cart.js (leggTilIKurv) -->
+      <button class="btn" onclick="leggTilIKurv({name:'Jakke', price:599})">Legg i handlekurv</button>
+    </section>
+  </main>
+
+  <!-- Modal (enkel) -->
+  <div id="simpleModal" class="modal">
+    <div class="modal-box">
+      <p id="modalText">Produktet er lagt i handlekurven.</p>
+      <button onclick="lukkModal()" class="btn-outline">Lukk</button>
+      <a href="handlekurv.html" class="btn">Gå til handlekurv</a>
+    </div>
+  </div>
+
+  <footer class="site-footer"><div class="container">© 2025 KlærNett</div></footer>
+
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+
+  <button onclick="addToCart('Jakke', 899, 'images/jakke1.png')">Legg i handlekurv</button>
+  
+
+</body>
+</html>
