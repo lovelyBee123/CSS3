@@ -1,0 +1,7 @@
+.sec1{
+    display: flex;      /* Gjør elementet om til en flex-container */
+    align-items: center;    /* sentraliserer innholdet vertikalt */
+    justify-content: center;    /* gjør som at alt innholdet er i midten */
+    background-color: orange;   /* gir bakgrunnsfargen oransje */ 
+    height: 7.25rem;    /* setter høyden på elementet */
+}
